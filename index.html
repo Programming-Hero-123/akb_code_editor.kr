@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Editor</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/theme/material-darker.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/theme/monokai.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="editor">
+      <div class="settings">
+        <label for="theme">Theme:</label>
+        <select id="theme">
+          <option value="default">Default</option>
+          <option value="material-darker">Material Darker</option>
+          <option value="monokai">Monokai</option>
+        </select>
+        <label for="fontSize">Font Size:</label>
+        <input type="range" id="fontSize" min="12" max="24" value="16">
+        <button id="run-button">Run</button>
+        <button id="save-button">Save</button>
+      </div>
+      <div class="code-section">
+        <h3>HTML</h3>
+        <textarea id="html-code" spellcheck="false"></textarea>
+      </div>
+      <div class="code-section">
+        <h3>CSS</h3>
+        <textarea id="css-code" spellcheck="false"></textarea>
+      </div>
+      <div class="code-section">
+        <h3>JavaScript</h3>
+        <textarea id="js-code" spellcheck="false"></textarea>
+      </div>
+    </div>
+    <div class="preview-container">
+      <iframe id="preview"></iframe>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/javascript/javascript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/css/css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/htmlmixed/htmlmixed.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
